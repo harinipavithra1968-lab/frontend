@@ -560,6 +560,7 @@ body {
   .register-form {
     padding: 45px;
   }
+
 }
 
 /* =========================
@@ -585,4 +586,26 @@ body {
   .form-header h2 {
     font-size: 29px;
   }
+  @media (max-width: 768px) {
+  .register-image {
+    display: block;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .login-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .login-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
 }
