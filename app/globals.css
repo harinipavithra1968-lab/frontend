@@ -586,6 +586,7 @@ body {
   .form-header h2 {
     font-size: 29px;
   }
+}
   @media (max-width: 768px) {
   .register-image {
     display: block;
@@ -607,5 +608,4 @@ body {
     object-fit: cover;
     object-position: center;
   }
-}
 }
