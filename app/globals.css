@@ -546,57 +546,25 @@ body {
 @media (max-width: 900px) {
 
   .register-container {
-    max-width: 600px;
+    max-width: 700px;
+    min-height: auto;
+    flex-direction: column;
   }
 
+  /* SHOW IMAGE */
   .register-image {
-    display: none;
-  }
-
-  .register-form-section {
-    width: 100%;
-  }
-
-  .register-form {
-    padding: 45px;
-  }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 500px) {
-
-  .register-page {
-    padding: 0;
-  }
-
-  .register-container {
-    min-height: 100vh;
-
-    border-radius: 0;
-  }
-
-  .register-form {
-    padding: 30px 22px;
-  }
-
-  .form-header h2 {
-    font-size: 29px;
-  }
-}
-  @media (max-width: 768px) {
-  .register-image {
-    display: block;
-    width: 100%;
-    height: 250px;
+    display: flex;
     position: relative;
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
+    padding: 35px;
     overflow: hidden;
   }
 
   .login-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
   }
@@ -607,5 +575,152 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .image-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .image-content h1 {
+    font-size: 38px;
+  }
+
+  .image-content p {
+    font-size: 14px;
+  }
+
+  /* FORM BELOW IMAGE */
+  .register-form-section {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .register-form {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .register-page {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .register-container {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    flex-direction: column;
+  }
+
+  /* =========================
+     MOBILE IMAGE
+  ========================= */
+
+  .register-image {
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    height: 260px;
+    min-height: 260px;
+    padding: 25px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .login-image {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .login-image img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* IMAGE OVERLAY */
+
+  .image-overlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  /* IMAGE TEXT */
+
+  .image-content {
+    position: absolute;
+    left: 25px;
+    bottom: 22px;
+    z-index: 2;
+  }
+
+  .brand-small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .image-content h1 {
+    font-size: 30px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .image-content p {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .image-dots {
+    margin-top: 15px;
+  }
+
+  /* =========================
+     FORM
+  ========================= */
+
+  .register-form-section {
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .register-form {
+    width: 100%;
+    padding: 30px 22px;
+  }
+
+  .form-header h2 {
+    font-size: 29px;
   }
 }
